@@ -1,0 +1,23 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Deploy
+      use: appleboy/ssh-action@master
+      with:
+        host: ${{ sercrets.SSH_HOST }}
+        username: ${{ sercrets.SSH_USER }}
+        key: ${{ sercrets.SSH_KEY }}
+        script: |
+          cd gis-cdn
+          cd ..
+          docker compose build
+          docker compose up -d
+                    
