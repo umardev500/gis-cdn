@@ -18,6 +18,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd gis-cdn
+            git restore .
+            git clean -f -d
             git pull origin main
             cd ..
             docker compose build
