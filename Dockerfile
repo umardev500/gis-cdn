@@ -18,6 +18,7 @@ WORKDIR /app
 COPY . .
 
 RUN mkdir public
+RUN mkdir uploads
 
 RUN ln -s /app/uploads /app/public
 
