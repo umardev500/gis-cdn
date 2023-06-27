@@ -17,6 +17,10 @@ WORKDIR /app
 
 COPY . .
 
+RUN mkdir public
+
+RUN ln -s /app/uploads /app/public
+
 RUN yarn install
 
 RUN yarn build
