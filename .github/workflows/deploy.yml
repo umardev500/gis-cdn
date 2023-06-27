@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Deploy
-        use: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ sercrets.SSH_HOST }}
           username: ${{ sercrets.SSH_USER }}
