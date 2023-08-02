@@ -13,8 +13,8 @@ export const uploadService = async (file: Express.Multer.File): Promise<UploadRe
     const smallOutPath = path.join(uploadPath, smallFileName)
 
     // define file url
-    const fileURL = `${process.env.BASE_URL ?? ''}:${process.env.PORT ?? ''}/uploads/images/${fileName}`
-    const fileSmallURL = `${process.env.BASE_URL ?? ''}:${process.env.PORT ?? ''}/uploads/images/${smallFileName}`
+    const fileURL = `${process.env.BASE_URL ?? ''}/app2/uploads/images/${fileName}`
+    const fileSmallURL = `${process.env.BASE_URL ?? ''}/app2/uploads/images/${smallFileName}`
 
     try {
         const sourceBuff = file.buffer
