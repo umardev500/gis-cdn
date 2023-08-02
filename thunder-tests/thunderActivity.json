@@ -4,11 +4,11 @@
         "colId": "history",
         "containerId": "",
         "name": "upload",
-        "url": "http://103.175.219.97:5001/api/upload",
+        "url": "http://localhost:4000/app2/api/upload",
         "method": "POST",
         "sortNum": 0,
         "created": "2023-06-22T08:20:47.189Z",
-        "modified": "2023-06-27T11:40:30.809Z",
+        "modified": "2023-08-02T07:30:30.102Z",
         "headers": [],
         "params": [],
         "body": {
