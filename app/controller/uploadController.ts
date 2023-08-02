@@ -29,6 +29,7 @@ export const uploadHandler = async (req: Request, res: Response): Promise<void> 
     } catch (err) {
         response = {
             success: false,
+            message: err as string,
         }
         res.json(response)
     }
